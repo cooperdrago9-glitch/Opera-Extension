@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Links & Calendar Sidebar",
+  "version": "1.0",
+  "description": "Opera sidebar with saved links, folders, and daily schedule",
+  "sidebar_action": {
+    "default_panel": "sidebar.html",
+    "default_title": "Links"
+  },
+  "permissions": ["storage"]
+}

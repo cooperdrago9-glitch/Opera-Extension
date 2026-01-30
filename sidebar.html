@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Day Planner</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 12px;
+  font-family: system-ui, sans-serif;
+  background: #ffffff;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e53935;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #ffb3b3, 4px 4px 0 #ffd6d6;
+}
+
+.logo {
+  width: 26px;
+}
+
+/* TOP ICON BAR */
+.icon-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.icon-bar img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* INPUTS */
+input, button {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+}
+
+button {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 16px 0;
+}
+
+/* LINKS */
+.folder-title {
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.folder.collapsed .link {
+  display: none;
+}
+
+.link {
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* CALENDAR */
+.block-title {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.hour {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 6px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.time {
+  width: 60px;
+  color: #666;
+}
+
+.event {
+  font-weight: 500;
+}
+
+.now-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e53935;
+  top: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>
+  <img src="icon.png" class="logo">
+  Day Planner
+</h1>
+
+<!-- WEBSITE ICONS -->
+<div class="icon-bar">
+  <img id="gmailBtn" src="https://www.google.com/s2/favicons?domain=gmail.com">
+  <img id="youtubeBtn" src="https://www.google.com/s2/favicons?domain=youtube.com">
+  <img id="zoomBtn" src="https://www.google.com/s2/favicons?domain=zoom.us">
+</div>
+
+<!-- ADD LINK -->
+<div class="row">
+  <input id="linkInput" placeholder="Paste link">
+  <input id="folderInput" placeholder="Folder">
+  <button id="addLinkBtn">Add</button>
+</div>
+
+<div id="folders"></div>
+
+<hr>
+
+<!-- DAY NAV -->
+<div class="row">
+  <button id="prevDay">◀</button>
+  <strong id="dayLabel" style="flex:1;text-align:center;">Today</strong>
+  <button id="nextDay">▶</button>
+  <button id="resetDay">Reset</button>
+</div>
+
+<!-- PRESETS -->
+<div class="row">
+  <button class="preset">Admin Meeting</button>
+  <button class="preset">Zoom Meeting</button>
+  <button class="preset">Standup</button>
+  <button class="preset">Emails</button>
+  <button class="preset">Focus Time</button>
+  <button class="preset">Lunch</button>
+  <button class="preset">Break</button>
+</div>
+
+<div id="calendar"></div>
+
+<script src="sidebar.js"></script>
+</body>
+</html>
