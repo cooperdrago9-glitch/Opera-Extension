@@ -1,1 +1,5 @@
-download repo save sidebar.html sidebar.js manifest.json and icon.png into a separate folder then go to opera extensions and press load unpacked then open the file you saved the code in
+# Opera-Extension
+Works on chrome byt designed for opera
+Download repo save sidebar.html sidebar.js manifest.json and icon.png into a separate folder
+Open opera extensions and turn developer mode on
+Then press load unpacked then open the file you saved the code in
